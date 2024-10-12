@@ -1,0 +1,111 @@
+---
+title: "Session 3 Questions"
+subtitle: "Basic Time Series Analysis using Excel and EViews"
+author: Washington Santos da Silva
+lang: pt
+format:
+  html:
+    theme: cosmos
+    toc: true
+    number-sections: true
+    self-contained: true
+execute:
+  echo: true
+  message: false
+  warning: false
+bibliography: referencias.bibtex
+csl: associacao-brasileira-de-normas-tecnicas-ipea.csl
+editor: source
+---
+
+<style type="text/css">
+  body{
+  font-size: 13pt; 
+  text-align: justify
+      }
+</style>
+
+
+```{r}
+#| label: setup 
+
+# pacotes utilizados
+library(here)         # permite utilizar caminhos relativos no projeto
+library(tidyverse)    # metapacote que inclui readr, ggplot2, etc.
+```
+
+# Modulo 3 - Session 3 - Questions
+
+O objetivo deste componente é dar a você uma ideia de como gerar dados 
+que sejam consistentes com um modelo ARMA$(p,q)$ específico.
+
+
+## Importação dos Dados 
+
+
+```{r}
+## define o caminho para a planilha Excel contendo os dados
+path_dat01 <- here::here("data/raw/module3_data_Identifying_ARMA.csv")
+
+## importa os dados da planilha Excel
+et <- readr::read_csv(path_dat01)
+```
+
+Verificando a estrutura dos dados importados:
+
+```{r}
+## verifica a estrutura dos dados importados
+dplyr::glimpse(et)
+```
+
+
+
+## Question 3.8
+
+Importe o arquivo de `dados module3_data_Identifying_ARMA.csv`. A variável 
+`et` representa uma variável de choque aleatório. Forneça a média e o desvio padrão de `et` (com três casas decimais, sem arredondamento. 
+Por exemplo, se o número for 2,535986, insira 2,535).
+
+```{r}
+## média
+mean(et$et)
+```
+
+```{r}
+## média
+sd(et$et)
+```
+
+
+
+
+
+
+
+
+
+
+
+
+# Referências
+
+::: {#refs}
+:::
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
